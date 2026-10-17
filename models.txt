@@ -1,0 +1,82 @@
+# Area names for the PSO2 map tool.
+#
+# One line per ModelId.  The separator can be "=", ":", "-", a comma, a tab or just spaces,
+# and "#" or "//" start a comment.  An id that is not listed here simply shows its number,
+# and deleting this file changes nothing but the labels.
+#
+#   330 = Ruins
+#   311 : Forest 1
+#   310   Forest 2
+#
+# THE NAME IS ONLY A LABEL.  What the tool reads, generates and exports is always the number,
+# so renaming anything here cannot change a map or a block.json.
+#
+# The list below was derived from the 583 quest packets, not from the game's own text: for each
+# model it takes the area folder the packets live in, and the zone it sits at inside a free
+# exploration.  The zone order is what gives the 1 / 2 / 3, and the areas marked "(fixed map)"
+# are the ones that are always unkB = 0 - the last zone of an exploration, which is not
+# generated at all but shipped as a .lat.  Correct anything that looks wrong; it is yours.
+
+150 = Campship
+
+311 = Forest 1
+310 = Forest 2
+
+321 = Tundra 1
+320 = Tundra 2
+
+330 = Ruins
+
+411 = Desert 1
+410 = Desert 2
+
+420 = Tunnels 1
+421 = Tunnels 2
+490 = Tunnels 3 (fixed map)
+
+430 = Quarry 1
+431 = Quarry 2
+
+510 = Volcanic 1
+511 = Volcanic 2
+
+521 = Skyscape 1
+520 = Skyscape 2
+590 = Skyscape 3 (fixed map)
+
+530 = Sanctum
+
+610 = Coast 1
+611 = Coast 2
+690 = Coast 3 (fixed map)
+
+620 = Seabed (river)
+621 = Seabed 3 (fixed map)
+
+630 = Facility (river)
+
+710 = Shironia (river)
+790 = Shironia 2 (fixed map)
+
+720 = Kuron (fixed maps)
+
+810 = Tokyo
+890 = Tokyo 2 (fixed map)
+
+820 = Las Vegas
+821 = Las Vegas
+822 = Las Vegas
+
+3140 = Woods
+
+2200 = Twisted Shadows (event)
+2210 = Twisted Shadows (event)
+2220 = Twisted Shadows (event)
+2230 = Twisted Shadows (event)
+
+9000 = Lobby
+
+# Seen only in Advanced Quests, area not identified:
+# 211 =
+# 212 =
+# 290 =

@@ -1,0 +1,680 @@
+# The usual contents of InfoTable1/2/3, by area.
+#
+# A zone made by hand has no packet to take these from, and exporting them as zeros
+# means fixing the block.json afterwards - these tables appear to drive scenery, so
+# a zone with them empty does not look right in game. The values here are defaults,
+# measured over the 583 quest packets.
+#
+# Key: <ModelId> <UnkB> <ZoneIndex>, then one line per table. The lookup falls back
+# to <ModelId> <UnkB> and then to <ModelId>, so deleting the finer lines only makes
+# the answer coarser. A field is <id>:<value> when its ten values are all the same,
+# and <id>:v/v/v/... when they are not.
+#
+# Coverage of the dominant form, over the corpus: InfoTable2 94%, InfoTable1 86%.
+# It is a starting point and not a rule - correct whatever your zone needs.
+#
+# InfoTable3.Unk1 and Unk2 are NOT here: they are sizeX and sizeY, which the tool
+# already knows (1151 of 1151 zones in the corpus). Unk3 and Unk4 decide the map and
+# are fields of their own in the window.
+#
+# The `x =` line is the ZoneSettingsExtra record, same key and same fallback. A zone
+# from a packet writes its own values; one made by hand used to export every one of
+# these as a zero, and a zero is often not even a value the field ever takes - UnkN
+# is 0 in none of the 1641 zones of the corpus. UnkAC and RawE0 are floats stored by
+# their raw dword, which is what the files do: 1133903872 is 300.0f. Raw04, Raw10,
+# Raw98, RawD4, RawD8, RawDC and RawE0 are named by their offset in the 0xF0 record
+# and neither PacketMan nor Starlight writes them yet (FINDINGS 5.4).
+
+211 1 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=5, UnkAB=12, UnkAC=0, UnkK=107007000, UnkL=7003000, UnkM=999, UnkN=4102, UnkO=0, UnkR=167, UnkS=172, UnkT=7003000, UnkU=47
+212 2 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=1, RawD8=0, RawDC=-1, RawE0=0, UnkAA=5, UnkAB=12, UnkAC=0, UnkK=107007001, UnkL=7003001, UnkM=999, UnkN=4102, UnkO=0, UnkR=168, UnkS=173, UnkT=7003001, UnkU=47
+290 0 2
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=3, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=7003003, UnkM=-1, UnkN=4164, UnkO=0, UnkR=142, UnkS=146, UnkT=7003003, UnkU=-1
+310 0 0
+  t2 = 60:100000, 13:100000, 15:30000, 0:0, 0:0
+  x = Raw04=11, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=-1, UnkL=2022000, UnkM=999, UnkN=4167, UnkO=256, UnkR=2022000, UnkS=2022000, UnkT=2022000, UnkU=127
+310 0 1
+  t2 = 37:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1128792064, UnkK=-1, UnkL=2022001, UnkM=-1, UnkN=4228, UnkO=0, UnkR=2022000, UnkS=42, UnkT=2022001, UnkU=-1
+310 0 2
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=1133903872, UnkK=-1, UnkL=1071, UnkM=-1, UnkN=4100, UnkO=0, UnkR=37, UnkS=42, UnkT=55, UnkU=-1
+310 1 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102001001, UnkL=2001020, UnkM=999, UnkN=4119, UnkO=256, UnkR=34, UnkS=41, UnkT=91, UnkU=29
+310 2 1
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=12, UnkAB=5, UnkAC=0, UnkK=107001001, UnkL=7001001, UnkM=999, UnkN=4102, UnkO=0, UnkR=141, UnkS=145, UnkT=7001001, UnkU=47
+310 2 3
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 16:30000, 29:100000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=0, UnkAB=4, UnkAC=0, UnkK=103003003, UnkL=1094, UnkM=999, UnkN=4119, UnkO=256, UnkR=42, UnkS=66, UnkT=83, UnkU=31
+311 0 0
+  t2 = 60:100000, 13:100000, 15:30000, 0:0, 0:0
+  x = Raw04=21, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=-1, UnkL=2022000, UnkM=999, UnkN=4167, UnkO=256, UnkR=2022000, UnkS=2022000, UnkT=2022000, UnkU=127
+311 1 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102001000, UnkL=2001010, UnkM=999, UnkN=4119, UnkO=256, UnkR=32, UnkS=39, UnkT=90, UnkU=29
+311 1 1
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 16:30000, 17:100000, 24:100000
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=0, UnkAB=4, UnkAC=0, UnkK=103003001, UnkL=1093, UnkM=999, UnkN=4118, UnkO=0, UnkR=41, UnkS=57, UnkT=82, UnkU=-1
+311 1 2
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 16:30000, 17:100000, 24:100000
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=0, UnkAB=4, UnkAC=0, UnkK=103003002, UnkL=1093, UnkM=999, UnkN=4118, UnkO=0, UnkR=41, UnkS=57, UnkT=82, UnkU=-1
+320 0 1
+  t2 = 37:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=12, UnkAB=-1, UnkAC=1128792064, UnkK=-1, UnkL=2023001, UnkM=-1, UnkN=4228, UnkO=0, UnkR=2023000, UnkS=42, UnkT=2023001, UnkU=-1
+320 0 2
+  t2 = 32:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=1139, UnkM=-1, UnkN=4100, UnkO=0, UnkR=37, UnkS=42, UnkT=141, UnkU=-1
+320 0 4
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=1148, UnkM=-1, UnkN=4100, UnkO=0, UnkR=37, UnkS=42, UnkT=155, UnkU=-1
+320 1 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:50000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102004001, UnkL=2004020, UnkM=999, UnkN=4103, UnkO=256, UnkR=55, UnkS=72, UnkT=140, UnkU=19
+320 1 3
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:50000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103012003, UnkL=1166, UnkM=999, UnkN=4119, UnkO=257, UnkR=73, UnkS=92, UnkT=165, UnkU=25
+320 1 4
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:50000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103012004, UnkL=1167, UnkM=999, UnkN=4118, UnkO=1, UnkR=74, UnkS=93, UnkT=166, UnkU=-1
+321 0 0
+  t2 = 60:100000, 13:100000, 14:30000/30000/30000/30000/100000/30000/30000/30000/100000/30000, 15:30000, 0:0
+  x = Raw04=11, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=-1, UnkL=2023000, UnkM=999, UnkN=4167, UnkO=256, UnkR=2023000, UnkS=2023000, UnkT=2023000, UnkU=127
+321 1 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:50000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102004000, UnkL=2004010, UnkM=999, UnkN=4119, UnkO=256, UnkR=32, UnkS=71, UnkT=139, UnkU=19
+321 1 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:50000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103012001, UnkL=1165, UnkM=999, UnkN=4118, UnkO=0, UnkR=72, UnkS=91, UnkT=164, UnkU=-1
+321 1 2
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:50000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103012002, UnkL=1165, UnkM=999, UnkN=4118, UnkO=0, UnkR=72, UnkS=91, UnkT=164, UnkU=-1
+330 0 0
+  t2 = 60:100000, 13:100000, 14:30000, 15:30000, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=-1, UnkL=2024000, UnkM=999, UnkN=4103, UnkO=256, UnkR=2024000, UnkS=2024000, UnkT=2024000, UnkU=127
+330 0 1
+  t2 = 37:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1128792064, UnkK=-1, UnkL=2024001, UnkM=-1, UnkN=4228, UnkO=0, UnkR=2024000, UnkS=42, UnkT=2024001, UnkU=-1
+330 0 2
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=2007002, UnkM=-1, UnkN=4100, UnkO=0, UnkR=122, UnkS=42, UnkT=2007002, UnkU=-1
+330 0 4
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=3022002, UnkM=-1, UnkN=4100, UnkO=0, UnkR=130, UnkS=137, UnkT=3022002, UnkU=-1
+330 1 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102007000, UnkL=2007010, UnkM=999, UnkN=4119, UnkO=257, UnkR=120, UnkS=128, UnkT=2007000, UnkU=42
+330 1 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102007001, UnkL=2007020, UnkM=999, UnkN=4119, UnkO=257, UnkR=121, UnkS=129, UnkT=2007001, UnkU=42
+330 1 2
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103021002, UnkL=3021000, UnkM=999, UnkN=4118, UnkO=0, UnkR=125, UnkS=132, UnkT=3021000, UnkU=-1
+330 1 3
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103021003, UnkL=3021001, UnkM=999, UnkN=4119, UnkO=256, UnkR=126, UnkS=133, UnkT=3021001, UnkU=43
+330 1 4
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103021004, UnkL=3021002, UnkM=999, UnkN=4150, UnkO=0, UnkR=127, UnkS=134, UnkT=3021002, UnkU=-1
+410 0 0
+  t2 = 60:100000, 15:30000/30000/30000/30000/30000/30000/30000/30000/30000/0, 0:0, 0:0, 0:0
+  x = Raw04=3, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=-1, UnkL=2018000, UnkM=999, UnkN=4167, UnkO=256, UnkR=2018000, UnkS=2018000, UnkT=2018000, UnkU=127
+410 0 1
+  t2 = 37:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=5, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1128792064, UnkK=-1, UnkL=2018001, UnkM=-1, UnkN=4292, UnkO=0, UnkR=2018000, UnkS=2018000, UnkT=2018001, UnkU=-1
+410 0 2
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=1127, UnkM=-1, UnkN=4100, UnkO=0, UnkR=37, UnkS=42, UnkT=133, UnkU=-1
+410 1 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=1128792064, UnkK=102003001, UnkL=2003020, UnkM=999, UnkN=4119, UnkO=256, UnkR=52, UnkS=70, UnkT=132, UnkU=18
+410 1 4
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103009004, UnkL=1151, UnkM=999, UnkN=4118, UnkO=0, UnkR=61, UnkS=78, UnkT=152, UnkU=-1
+410 2 1
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=12, UnkAB=5, UnkAC=0, UnkK=107004001, UnkL=7004001, UnkM=999, UnkN=4102, UnkO=0, UnkR=139, UnkS=143, UnkT=7004001, UnkU=47
+410 2 3
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103010003, UnkL=1144, UnkM=999, UnkN=4119, UnkO=256, UnkR=57, UnkS=74, UnkT=148, UnkU=20
+411 0 0
+  t2 = 60:100000, 15:30000/30000/30000/30000/30000/30000/30000/30000/30000/0, 0:0, 0:0, 0:0
+  x = Raw04=4, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=-1, UnkL=2018000, UnkM=999, UnkN=4167, UnkO=256, UnkR=2018000, UnkS=2018000, UnkT=2018000, UnkU=127
+411 1 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102003000, UnkL=2003010, UnkM=999, UnkN=4119, UnkO=256, UnkR=51, UnkS=69, UnkT=131, UnkU=18
+411 1 1
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103009001, UnkL=1149, UnkM=999, UnkN=4118, UnkO=0, UnkR=59, UnkS=76, UnkT=150, UnkU=-1
+411 1 2
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103009002, UnkL=1149, UnkM=999, UnkN=4118, UnkO=0, UnkR=59, UnkS=76, UnkT=150, UnkU=-1
+411 2 4
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103010004, UnkL=1145, UnkM=999, UnkN=4118, UnkO=0, UnkR=58, UnkS=75, UnkT=149, UnkU=-1
+420 1 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102005000, UnkL=2005010, UnkM=999, UnkN=4119, UnkO=256, UnkR=75, UnkS=94, UnkT=169, UnkU=26
+420 1 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103015001, UnkL=1179, UnkM=999, UnkN=4118, UnkO=0, UnkR=83, UnkS=101, UnkT=179, UnkU=-1
+420 1 2
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103015002, UnkL=1179, UnkM=999, UnkN=4118, UnkO=0, UnkR=83, UnkS=101, UnkT=179, UnkU=-1
+420 2 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 27:100000
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103014000, UnkL=1177, UnkM=999, UnkN=4151, UnkO=0, UnkR=82, UnkS=100, UnkT=178, UnkU=-1
+421 0 4
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=103016004, UnkL=1175, UnkM=999, UnkN=4100, UnkO=0, UnkR=37, UnkS=42, UnkT=174, UnkU=-1
+421 1 1
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102005001, UnkL=2005020, UnkM=999, UnkN=4119, UnkO=256, UnkR=76, UnkS=95, UnkT=170, UnkU=26
+421 1 4
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103015004, UnkL=1181, UnkM=999, UnkN=4118, UnkO=0, UnkR=85, UnkS=103, UnkT=181, UnkU=-1
+421 2 1
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=12, UnkAB=5, UnkAC=0, UnkK=107004501, UnkL=7006001, UnkM=999, UnkN=4102, UnkO=0, UnkR=152, UnkS=157, UnkT=7006001, UnkU=47
+421 2 3
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103015003, UnkL=1180, UnkM=999, UnkN=4119, UnkO=256, UnkR=84, UnkS=102, UnkT=180, UnkU=28
+430 1 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102010000, UnkL=2010010, UnkM=999, UnkN=4151, UnkO=256, UnkR=198, UnkS=203, UnkT=2010000, UnkU=61
+430 1 1
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103030001, UnkL=3030000, UnkM=999, UnkN=4118, UnkO=0, UnkR=192, UnkS=197, UnkT=3030000, UnkU=-1
+430 1 2
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103030002, UnkL=3030000, UnkM=999, UnkN=4118, UnkO=0, UnkR=192, UnkS=197, UnkT=3030000, UnkU=-1
+430 2 3
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103030003, UnkL=3030001, UnkM=999, UnkN=4119, UnkO=256, UnkR=193, UnkS=198, UnkT=3030001, UnkU=59
+431 0 2
+  t2 = 32:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1140457472, UnkK=-1, UnkL=2010002, UnkM=-1, UnkN=4100, UnkO=0, UnkR=200, UnkS=205, UnkT=2010002, UnkU=-1
+431 0 4
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=103031004, UnkL=3031002, UnkM=-1, UnkN=4100, UnkO=0, UnkR=197, UnkS=202, UnkT=3031002, UnkU=-1
+431 1 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102010001, UnkL=2010020, UnkM=999, UnkN=4151, UnkO=256, UnkR=199, UnkS=204, UnkT=2010001, UnkU=61
+431 1 4
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 54:100000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103030004, UnkL=3030002, UnkM=999, UnkN=4150, UnkO=0, UnkR=194, UnkS=199, UnkT=3030002, UnkU=-1
+431 2 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=12, UnkAB=5, UnkAC=0, UnkK=107029001, UnkL=7029001, UnkM=999, UnkN=4102, UnkO=0, UnkR=232, UnkS=234, UnkT=7029001, UnkU=47
+431 2 3
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103031003, UnkL=3031001, UnkM=999, UnkN=4119, UnkO=256, UnkR=196, UnkS=201, UnkT=3031001, UnkU=60
+490 0 2
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=1172, UnkM=-1, UnkN=4100, UnkO=0, UnkR=37, UnkS=42, UnkT=171, UnkU=-1
+510 1 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 16:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102002000, UnkL=2002010, UnkM=999, UnkN=4119, UnkO=256, UnkR=32, UnkS=43, UnkT=92, UnkU=30
+510 1 1
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=8, UnkAB=7, UnkAC=0, UnkK=103006001, UnkL=1190, UnkM=999, UnkN=4118, UnkO=0, UnkR=44, UnkS=60, UnkT=85, UnkU=-1
+510 1 2
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=8, UnkAB=7, UnkAC=0, UnkK=103006002, UnkL=1190, UnkM=999, UnkN=4118, UnkO=0, UnkR=44, UnkS=60, UnkT=85, UnkU=-1
+511 0 2
+  t2 = 33:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=1091, UnkM=-1, UnkN=4100, UnkO=0, UnkR=37, UnkS=46, UnkT=59, UnkU=-1
+511 0 4
+  t2 = 33:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=1078, UnkM=-1, UnkN=4116, UnkO=0, UnkR=37, UnkS=53, UnkT=69, UnkU=-1
+511 1 1
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 16:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102002001, UnkL=2002020, UnkM=999, UnkN=4119, UnkO=256, UnkR=34, UnkS=45, UnkT=93, UnkU=30
+511 1 3
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=7, RawD8=0, RawDC=-1, RawE0=0, UnkAA=8, UnkAB=7, UnkAC=0, UnkK=103006003, UnkL=1096, UnkM=999, UnkN=4119, UnkO=256, UnkR=45, UnkS=61, UnkT=86, UnkU=33
+511 1 4
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=8, UnkAB=7, UnkAC=0, UnkK=103006004, UnkL=1097, UnkM=999, UnkN=4118, UnkO=0, UnkR=46, UnkS=62, UnkT=87, UnkU=-1
+520 0 4
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=103019004, UnkL=3019003, UnkM=-1, UnkN=4132, UnkO=0, UnkR=37, UnkS=53, UnkT=3019003, UnkU=-1
+520 1 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=8, UnkAB=6, UnkAC=0, UnkK=102006001, UnkL=2006020, UnkM=999, UnkN=4119, UnkO=257, UnkR=97, UnkS=111, UnkT=2006002, UnkU=37
+520 1 3
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103019003, UnkL=3019002, UnkM=999, UnkN=4119, UnkO=256, UnkR=103, UnkS=117, UnkT=3019002, UnkU=39
+520 1 4
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=6, UnkAC=0, UnkK=103018004, UnkL=3018003, UnkM=999, UnkN=4150, UnkO=0, UnkR=101, UnkS=115, UnkT=3018003, UnkU=-1
+521 1 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=8, UnkAB=6, UnkAC=0, UnkK=102006000, UnkL=2006010, UnkM=999, UnkN=4119, UnkO=257, UnkR=96, UnkS=110, UnkT=2006001, UnkU=37
+521 1 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=6, UnkAC=0, UnkK=103018001, UnkL=3018001, UnkM=999, UnkN=4118, UnkO=0, UnkR=99, UnkS=113, UnkT=3018001, UnkU=-1
+521 1 2
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=6, UnkAC=0, UnkK=103018002, UnkL=3018001, UnkM=999, UnkN=4118, UnkO=0, UnkR=99, UnkS=113, UnkT=3018001, UnkU=-1
+521 1 3
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=6, UnkAC=0, UnkK=103018003, UnkL=3018002, UnkM=999, UnkN=4119, UnkO=256, UnkR=100, UnkS=114, UnkT=3018002, UnkU=38
+530 0 2
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=0, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=2008003, UnkM=-1, UnkN=4100, UnkO=0, UnkR=164, UnkS=169, UnkT=2008003, UnkU=-1
+530 0 4
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=0, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=103025004, UnkL=3025003, UnkM=-1, UnkN=4100, UnkO=0, UnkR=164, UnkS=169, UnkT=3025003, UnkU=-1
+530 1 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=11, RawE0=1114636288, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102008000, UnkL=2008010, UnkM=999, UnkN=4151, UnkO=256, UnkR=165, UnkS=170, UnkT=2008001, UnkU=52
+530 1 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=13, RawE0=1117782016, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102008001, UnkL=2008020, UnkM=999, UnkN=4151, UnkO=256, UnkR=166, UnkS=171, UnkT=2008002, UnkU=52
+530 1 2
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=6, RawE0=1120403456, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103024002, UnkL=3024001, UnkM=999, UnkN=4150, UnkO=0, UnkR=159, UnkS=164, UnkT=3024001, UnkU=-1
+530 1 3
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=7, RawE0=1106247680, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103024003, UnkL=3024002, UnkM=999, UnkN=4151, UnkO=256, UnkR=160, UnkS=165, UnkT=3024002, UnkU=50
+530 1 4
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=8, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103024004, UnkL=3024003, UnkM=999, UnkN=4150, UnkO=0, UnkR=161, UnkS=166, UnkT=3024003, UnkU=-1
+530 2 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=14, RawE0=1120403456, UnkAA=12, UnkAB=5, UnkAC=0, UnkK=107009001, UnkL=7009001, UnkM=999, UnkN=4134, UnkO=0, UnkR=175, UnkS=180, UnkT=7009001, UnkU=47
+590 0 2
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=8, UnkAB=6, UnkAC=1133903872, UnkK=-1, UnkL=2006003, UnkM=-1, UnkN=4100, UnkO=0, UnkR=37, UnkS=127, UnkT=2006003, UnkU=-1
+610 0 0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  x = Raw04=5, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=-1, UnkL=2009005, UnkM=999, UnkN=4183, UnkO=256, UnkR=2009000, UnkS=2009000, UnkT=2009003, UnkU=57
+610 1 0
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102009000, UnkL=2009010, UnkM=999, UnkN=4119, UnkO=256, UnkR=186, UnkS=191, UnkT=2009000, UnkU=57
+610 1 1
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103027001, UnkL=3027000, UnkM=999, UnkN=4118, UnkO=0, UnkR=180, UnkS=185, UnkT=3027000, UnkU=-1
+610 1 2
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103027002, UnkL=3027000, UnkM=999, UnkN=4118, UnkO=0, UnkR=180, UnkS=185, UnkT=3027000, UnkU=-1
+610 1 3
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103027003, UnkL=3027003, UnkM=999, UnkN=4119, UnkO=256, UnkR=181, UnkS=186, UnkT=3027003, UnkU=55
+611 0 2
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=7028002, UnkM=-1, UnkN=4100, UnkO=0, UnkR=250, UnkS=252, UnkT=7028002, UnkU=-1
+611 0 4
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=103028004, UnkL=3028004, UnkM=-1, UnkN=4100, UnkO=0, UnkR=185, UnkS=190, UnkT=3028004, UnkU=-1
+611 1 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102009001, UnkL=2009020, UnkM=999, UnkN=4119, UnkO=256, UnkR=187, UnkS=192, UnkT=2009001, UnkU=57
+611 2 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=107028001, UnkL=7028001, UnkM=999, UnkN=4102, UnkO=0, UnkR=249, UnkS=251, UnkT=7028001, UnkU=47
+611 2 3
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103028003, UnkL=3028003, UnkM=999, UnkN=4119, UnkO=256, UnkR=184, UnkS=189, UnkT=3028003, UnkU=56
+611 2 4
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103027004, UnkL=3027004, UnkM=999, UnkN=4150, UnkO=0, UnkR=182, UnkS=187, UnkT=3027004, UnkU=-1
+620 1 0
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:70000/70000/100000/70000/70000/100000/70000/70000/100000/70000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103032000, UnkL=3032000, UnkM=999, UnkN=4151, UnkO=0, UnkR=204, UnkS=209, UnkT=3032000, UnkU=-1
+620 1 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:70000/70000/100000/70000/70000/100000/70000/70000/100000/70000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=8, UnkAB=7, UnkAC=0, UnkK=103033001, UnkL=3033000, UnkM=999, UnkN=4150, UnkO=0, UnkR=205, UnkS=210, UnkT=3033000, UnkU=-1
+620 1 2
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:70000/70000/100000/70000/70000/100000/70000/70000/100000/70000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=8, UnkAB=7, UnkAC=0, UnkK=103033002, UnkL=3033000, UnkM=999, UnkN=4150, UnkO=0, UnkR=205, UnkS=210, UnkT=3033000, UnkU=-1
+620 2 0
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:70000/70000/100000/70000/70000/100000/70000/70000/100000/70000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102011000, UnkL=2011010, UnkM=999, UnkN=4119, UnkO=256, UnkR=210, UnkS=215, UnkT=2011000, UnkU=64
+620 2 1
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:70000/70000/100000/70000/70000/100000/70000/70000/100000/70000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=102011001, UnkL=2011020, UnkM=999, UnkN=4119, UnkO=256, UnkR=211, UnkS=216, UnkT=2011001, UnkU=64
+621 0 2
+  t2 = 32:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=2011002, UnkM=-1, UnkN=4100, UnkO=0, UnkR=200, UnkS=205, UnkT=2011002, UnkU=-1
+621 0 4
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=103034004, UnkL=3034004, UnkM=-1, UnkN=4116, UnkO=0, UnkR=122, UnkS=205, UnkT=3034004, UnkU=-1
+621 1 3
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:70000/70000/100000/70000/70000/100000/70000/70000/100000/70000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=8, UnkAB=7, UnkAC=0, UnkK=103033003, UnkL=3033003, UnkM=999, UnkN=4151, UnkO=256, UnkR=206, UnkS=211, UnkT=3033003, UnkU=63
+621 1 4
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:70000/70000/100000/70000/70000/100000/70000/70000/100000/70000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=8, UnkAB=7, UnkAC=0, UnkK=103033004, UnkL=3033004, UnkM=999, UnkN=4150, UnkO=0, UnkR=207, UnkS=212, UnkT=3033004, UnkU=-1
+621 2 3
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:70000/70000/100000/70000/70000/100000/70000/70000/100000/70000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103034003, UnkL=3034003, UnkM=999, UnkN=4119, UnkO=256, UnkR=209, UnkS=214, UnkT=3034003, UnkU=56
+630 0 0
+  t2 = 60:100000, 13:100000, 15:30000, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=-1, UnkL=2027000, UnkM=999, UnkN=4103, UnkO=256, UnkR=2027000, UnkS=2027000, UnkT=2027000, UnkU=127
+630 0 1
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=2013001, UnkM=-1, UnkN=4100, UnkO=0, UnkR=2013001, UnkS=2013001, UnkT=2013001, UnkU=-1
+630 0 2
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=7032002, UnkM=-1, UnkN=4100, UnkO=0, UnkR=7032002, UnkS=7032002, UnkT=7032002, UnkU=-1
+630 0 4
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=103038004, UnkL=3038004, UnkM=-1, UnkN=4100, UnkO=0, UnkR=3038004, UnkS=3038004, UnkT=3038004, UnkU=-1
+630 1 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:70000/70000/100000/70000/70000/100000/70000/70000/100000/70000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103037000, UnkL=3037000, UnkM=999, UnkN=4151, UnkO=0, UnkR=3037000, UnkS=3037000, UnkT=3037000, UnkU=-1
+630 1 1
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:20000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103038001, UnkL=3038000, UnkM=999, UnkN=4118, UnkO=0, UnkR=3038000, UnkS=3038000, UnkT=3038000, UnkU=-1
+630 1 2
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:20000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103038002, UnkL=3038000, UnkM=999, UnkN=4118, UnkO=0, UnkR=3038000, UnkS=3038000, UnkT=3038000, UnkU=-1
+630 1 3
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:20000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103038003, UnkL=3038003, UnkM=999, UnkN=4119, UnkO=256, UnkR=3038003, UnkS=3038003, UnkT=3038003, UnkU=56
+630 2 0
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:0, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=5, UnkAB=7, UnkAC=0, UnkK=102013000, UnkL=2013010, UnkM=999, UnkN=4119, UnkO=256, UnkR=2013000, UnkS=2013000, UnkT=2013000, UnkU=79
+630 2 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=107030701, UnkL=7032001, UnkM=999, UnkN=5126, UnkO=0, UnkR=7032001, UnkS=7032001, UnkT=7032001, UnkU=47
+690 0 1
+  t2 = 36:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=3, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1140457472, UnkK=-1, UnkL=2009002, UnkM=-1, UnkN=68, UnkO=0, UnkR=188, UnkS=193, UnkT=2009004, UnkU=-1
+690 0 2
+  t2 = 111:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1140457472, UnkK=-1, UnkL=2009002, UnkM=-1, UnkN=4100, UnkO=0, UnkR=188, UnkS=193, UnkT=2009002, UnkU=-1
+710 0 4
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=3036004, UnkM=-1, UnkN=5124, UnkO=0, UnkR=3036004, UnkS=3036004, UnkT=3036004, UnkU=-1
+710 1 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103035000, UnkL=3035000, UnkM=999, UnkN=5175, UnkO=0, UnkR=3035000, UnkS=3035000, UnkT=3035000, UnkU=-1
+710 1 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103036001, UnkL=3036000, UnkM=999, UnkN=5142, UnkO=0, UnkR=3036000, UnkS=3036000, UnkT=3036000, UnkU=-1
+710 1 2
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103036002, UnkL=3036000, UnkM=999, UnkN=5142, UnkO=0, UnkR=3036000, UnkS=3036000, UnkT=3036000, UnkU=-1
+710 1 3
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103036003, UnkL=3036003, UnkM=999, UnkN=5143, UnkO=256, UnkR=3036003, UnkS=3036003, UnkT=3036003, UnkU=75
+710 2 0
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=5, UnkAB=7, UnkAC=0, UnkK=102012000, UnkL=2012010, UnkM=999, UnkN=5143, UnkO=256, UnkR=2012000, UnkS=2012000, UnkT=2012000, UnkU=76
+710 2 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=107031001, UnkL=7031001, UnkM=999, UnkN=5126, UnkO=0, UnkR=7031001, UnkS=7031001, UnkT=7031001, UnkU=47
+720 0 0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 30:100000
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=12, UnkAC=0, UnkK=-1, UnkL=2014010, UnkM=999, UnkN=4231, UnkO=256, UnkR=2014000, UnkS=2014000, UnkT=2014000, UnkU=94
+720 0 1
+  t2 = 32:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1128792064, UnkK=-1, UnkL=2014001, UnkM=-1, UnkN=4100, UnkO=0, UnkR=2014001, UnkS=2014001, UnkT=2014001, UnkU=-1
+720 0 2
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=7033002, UnkM=-1, UnkN=4100, UnkO=0, UnkR=7033002, UnkS=7033002, UnkT=7033002, UnkU=-1
+720 0 3
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=-1, UnkL=3040003, UnkM=999, UnkN=4103, UnkO=256, UnkR=3040003, UnkS=3040003, UnkT=3040003, UnkU=96
+720 0 4
+  t2 = 31:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=3040004, UnkM=-1, UnkN=4100, UnkO=0, UnkR=3040004, UnkS=3040004, UnkT=3040004, UnkU=-1
+720 1 0
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103039000, UnkL=3039000, UnkM=999, UnkN=4151, UnkO=0, UnkR=3039000, UnkS=3039000, UnkT=3039000, UnkU=-1
+720 1 1
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103040001, UnkL=3040000, UnkM=999, UnkN=4118, UnkO=0, UnkR=3040000, UnkS=3040000, UnkT=3040000, UnkU=-1
+720 1 2
+  t1 = 1:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 1:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=0, UnkK=103040002, UnkL=3040000, UnkM=999, UnkN=4118, UnkO=0, UnkR=3040000, UnkS=3040000, UnkT=3040000, UnkU=-1
+790 0 1
+  t2 = 1:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1128792064, UnkK=-1, UnkL=2012001, UnkM=-1, UnkN=4100, UnkO=0, UnkR=2012001, UnkS=2012001, UnkT=2012001, UnkU=-1
+790 0 2
+  t2 = 1:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=3, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1133903872, UnkK=-1, UnkL=7031003, UnkM=-1, UnkN=4164, UnkO=0, UnkR=7031002, UnkS=7031002, UnkT=7031002, UnkU=-1
+810 0 0
+  t2 = 12:100000, 13:100000, 14:100000, 15:100000, 16:100000
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=12, UnkAC=1137180672, UnkK=-1, UnkL=2015000, UnkM=-1, UnkN=4247, UnkO=256, UnkR=2015000, UnkS=2015000, UnkT=2015000, UnkU=104
+820 0 0
+  t2 = 14:100000, 16:100000, 17:100000, 0:0, 0:0
+  x = Raw04=-1, Raw10=12, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1145569280, UnkK=-1, UnkL=1800100, UnkM=-1, UnkN=4229, UnkO=256, UnkR=1800100, UnkS=1800100, UnkT=1800100, UnkU=-1
+821 0 0
+  t2 = 12:100000, 13:100000, 14:100000, 15:100000, 16:100000
+  x = Raw04=1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=5, UnkAB=7, UnkAC=1145569280, UnkK=-1, UnkL=2016000, UnkM=-1, UnkN=4295, UnkO=256, UnkR=2016000, UnkS=2016000, UnkT=2016000, UnkU=110
+822 0 0
+  t2 = 12:100000, 13:100000, 14:100000, 15:100000, 16:100000
+  x = Raw04=2, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=5, UnkAB=7, UnkAC=1145569280, UnkK=-1, UnkL=2016000, UnkM=-1, UnkN=4295, UnkO=256, UnkR=2016000, UnkS=2016000, UnkT=2016000, UnkU=110
+890 0 1
+  t2 = 32:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1128792064, UnkK=-1, UnkL=3042001, UnkM=-1, UnkN=4100, UnkO=0, UnkR=3042001, UnkS=3042001, UnkT=3042001, UnkU=-1
+2200 0 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=1128792064, UnkK=113000000, UnkL=13000000, UnkM=999, UnkN=4151, UnkO=256, UnkR=13000000, UnkS=13000000, UnkT=13000000, UnkU=82
+2200 0 1
+  t2 = 12:100000, 13:100000, 14:30000, 15:30000, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1128792064, UnkK=-1, UnkL=13000001, UnkM=-1, UnkN=4100, UnkO=0, UnkR=13000001, UnkS=13000001, UnkT=13000001, UnkU=-1
+2210 0 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=5, UnkAC=1128792064, UnkK=113001000, UnkL=13001000, UnkM=999, UnkN=4151, UnkO=256, UnkR=13001000, UnkS=13001000, UnkT=13001000, UnkU=90
+2210 0 1
+  t2 = 12:100000, 13:100000, 15:30000, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1128792064, UnkK=-1, UnkL=13001001, UnkM=-1, UnkN=4100, UnkO=0, UnkR=13001001, UnkS=13001001, UnkT=13001001, UnkU=-1
+2220 0 3
+  t2 = 1:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1137180672, UnkK=-1, UnkL=-1, UnkM=-1, UnkN=4228, UnkO=256, UnkR=-1, UnkS=-1, UnkT=8023003, UnkU=-1
+2230 0 2
+  t2 = 1:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=0, UnkK=-1, UnkL=-1, UnkM=-1, UnkN=4228, UnkO=256, UnkR=-1, UnkS=-1, UnkT=8023002, UnkU=-1
+3140 0 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 15:30000, 0:0, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=12, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=12, UnkAC=0, UnkK=102017000, UnkL=-1, UnkM=999, UnkN=4103, UnkO=256, UnkR=2017000, UnkS=2017000, UnkT=2017000, UnkU=122
+3140 0 1
+  t2 = 33:100000, 0:0, 0:0, 0:0, 0:0
+  x = Raw04=-1, Raw10=0, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=-1, UnkAB=-1, UnkAC=1128792064, UnkK=-1, UnkL=2017001, UnkM=-1, UnkN=4228, UnkO=0, UnkR=2017001, UnkS=2017001, UnkT=2017001, UnkU=-1
+3140 1 0
+  t1 = 0:100000, -1:0, -1:0
+  t2 = 12:100000, 15:30000, 0:0, 0:0, 0:0
+  t3 = 0:100000, -1:0, -1:0
+  x = Raw04=-1, Raw10=12, Raw98=-1, RawD4=-1, RawD8=-1, RawDC=-1, RawE0=0, UnkAA=7, UnkAB=12, UnkAC=0, UnkK=102017000, UnkL=-1, UnkM=999, UnkN=4103, UnkO=256, UnkR=2017000, UnkS=2017000, UnkT=2017000, UnkU=122

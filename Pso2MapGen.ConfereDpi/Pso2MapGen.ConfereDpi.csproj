@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pso2MapGen.Gui\Pso2MapGen.Gui.csproj" />
+    <!-- a janela da outra ferramenta escala da mesma maneira, por isso confere-se aqui tambem -->
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!-- consola, para o resultado sair como nos outros conferidores -->
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- este nao vai no pacote: e' um conferidor -->
+    <IsPublishable>false</IsPublishable>
+  </PropertyGroup>
+
+</Project>

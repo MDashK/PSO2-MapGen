@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pso2MapGen.Core\Pso2MapGen.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- a doutrina da escala por DPI vive num ficheiro so', compilado nas duas interfaces -->
+    <Compile Include="..\Comum\Escala.cs" Link="Escala.cs" />
+    <Using Include="Pso2.Interface" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- A escala por DPI.  Em omissao o gerador do `ApplicationConfiguration.Initialize()`
+         escreve `SetHighDpiMode(HighDpiMode.SystemAware)`, e com isso num ecra 4K a 150% ou
+         200% as letras cresciam (vao em pontos, e o GDI converte-as com o DPI do sistema) mas
+         as medidas em pixeis deste codigo ficavam no tamanho de 96 DPI — era por isso que os
+         botoes e as caixas cortavam o texto.  `PerMonitorV2` da' o DPI verdadeiro de cada
+         monitor e deixa o WinForms voltar a escalar quando a janela muda de ecra; quem
+         preferir o comportamento antigo troca esta linha por `SystemAware`.
+         A escala em si esta' na `JanelaPrincipal` (AutoScaleMode.Dpi) e na `Escala`. -->
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+  </PropertyGroup>
+
+</Project>

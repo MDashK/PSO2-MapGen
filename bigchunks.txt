@@ -1,0 +1,125 @@
+# Which ICE variant numbers exist for each big chunk - the UnkQ / UnkY of the packet.
+#
+#   <ModelId> <chunk> = <n>[, <n>...]
+#
+# UnkP names the big chunk (two ASCII characters little-endian: 13425 = 0x3471 = "q4") and
+# UnkQ picks which of its model files to load, stage/sn_<model>/ln_<model>_<chunk>_<n>.ice.
+# UnkW / UnkY are the same thing for the second design.
+#
+# THE VARIANT DOES NOT CHANGE THE MAP.  The generator only ever looks at the chunk NAME - two
+# designs with the same name and different variants are one chunk for the candidate pool - so
+# this number decides what the piece looks like in game, not where it goes.
+#
+# The list was not guessed: every line was probed against the client's own data. A file in
+# data/win32 is named md5 of its logical path, so for each model and each q* chunk of its .lps
+# the numbers 0 to 255 were hashed and the ones that exist kept. The answer is narrow - only
+# 80 and 81 are ever present, 80 for every chunk and 81 for seven of them - and the packets
+# agree: of the 998 (UnkP,UnkQ)/(UnkW,UnkY) pairs in the 583 captures, 969 use 80 and 29 use
+# 81, all of the 81s on 311 q5.
+#
+# A model or a chunk that is not listed here just gets no suggestions in the tool.
+
+211    q2   = 80
+211    q5   = 80
+211    q8   = 80
+212    q2   = 80
+212    q5   = 80
+212    q8   = 80
+220    q0   = 80
+220    q4   = 80
+220    q5   = 80, 81
+221    q0   = 80
+221    q4   = 80
+221    q5   = 80
+230    q0   = 80
+230    q4   = 80
+230    q5   = 80
+231    q0   = 80
+231    q4   = 80
+231    q5   = 80
+232    q0   = 80
+232    q4   = 80
+232    q5   = 80
+233    q0   = 80
+233    q4   = 80
+233    q5   = 80
+310    q0   = 80
+310    q4   = 80
+310    q5   = 80
+311    q0   = 80
+311    q5   = 80, 81
+320    q0   = 80
+320    q5   = 80
+321    q5   = 80
+330    q0   = 80
+330    q4   = 80
+330    q5   = 80
+410    q0   = 80
+410    q5   = 80
+410    q6   = 80
+411    q0   = 80
+411    q5   = 80, 81
+411    q6   = 80
+420    q0   = 80
+420    q4   = 80
+420    q5   = 80
+421    q0   = 80
+421    q4   = 80
+421    q5   = 80
+430    q0   = 80, 81
+430    q3   = 80
+430    q5   = 80
+431    q0   = 80, 81
+431    q3   = 80
+431    q5   = 80
+510    q1   = 80
+510    q4   = 80
+511    q0   = 80
+511    q1   = 80
+511    q4   = 80
+520    q0   = 80
+520    q5   = 80
+520    qg   = 80
+521    q0   = 80
+521    q5   = 80
+521    qg   = 80
+530    q0   = 80
+530    q5   = 80
+610    q0   = 80
+610    q4   = 80
+610    q5   = 80
+610    q8   = 80
+611    q0   = 80
+611    q4   = 80
+611    q5   = 80
+611    q8   = 80
+620    q0   = 80
+620    q4   = 80
+621    q0   = 80
+621    q4   = 80
+630    q0   = 80
+630    q5   = 80
+710    q0   = 80
+710    q4   = 80
+711    q0   = 80, 81
+711    q4   = 80
+720    q0   = 80
+720    q5   = 80
+810    q0   = 80
+810    q3   = 80
+810    q6   = 80
+833    q0   = 80
+833    q4   = 80
+833    q5   = 80
+2200   q5   = 80, 81
+2210   q0   = 80
+2210   q4   = 80
+2210   q5   = 80
+2220   q0   = 80
+2230   q0   = 80
+2230   q4   = 80
+3140   q0   = 80
+3140   q5   = 80
+3230   q3   = 80
+3230   q4   = 80
+3230   q5   = 80
